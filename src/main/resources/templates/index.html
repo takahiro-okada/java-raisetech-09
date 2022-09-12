@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>EC サイト</title>
+</head>
+<body>
+<th:block th:each="hoge : ${test}">
+    <p>
+        <span th:text="${hoge.id}"></span>
+        <span th:text="${hoge.name}"></span>
+        <span th:text="${hoge.price}"></span>
+    </p>
+</th:block>
+</body>
+</html>
