@@ -302,7 +302,7 @@ export const ApiFetch = () => {
   );
 };
 ```
-http://localhost:3000/にアクセスするとバックエンドから取得したデータを表示することができた。
+http://localhost:3000/ にアクセスするとバックエンドから取得したデータを表示することができた。  
 ![CleanShot 2022-09-13 at 11 18 45](https://user-images.githubusercontent.com/76928095/189792919-0a33af2b-5940-49fc-ba78-5e5795495513.png)
 
 ## 参考記事
