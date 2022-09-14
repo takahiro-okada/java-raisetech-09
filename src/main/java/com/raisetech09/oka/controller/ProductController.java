@@ -10,8 +10,6 @@ import java.util.List;
 @RestController
 @CrossOrigin(origins = "*")
 public class ProductController {
-    private ProductMapper productMapper;
-
     private ProductService productService;
 
     public ProductController(ProductService productService) {
