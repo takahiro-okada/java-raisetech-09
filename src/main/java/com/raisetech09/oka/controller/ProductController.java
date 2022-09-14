@@ -1,9 +1,7 @@
 package com.raisetech09.oka.controller;
 
 import com.raisetech09.oka.service.ProductService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import com.raisetech09.oka.repository.ProductMapper;
 
 import java.util.List;
 
