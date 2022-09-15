@@ -14,10 +14,19 @@ public class ProductController {
         this.productService = productService;
     }
 
+    //    localhost:8080/products?price=200のGETリクエストを行い、価格が200で登録されている情報を取得する
+    //    もしパラメーターがセットされていなければ商品全件の情報を取得する
     @GetMapping("/products")
-    public List<ProductResponse> get() {
-        return productService.findAll();
+    public List<ProductResponse> get(
+            @RequestParam(value = "price", defaultValue = "-1") int price
+    ) {
+        if (price == -1) {
+            return productService.findAll();
+        } else {
+            return productService.findByPrice(price);
+        }
     }
+
 
     //  idで検索する
     @GetMapping("/products/{id}")
@@ -28,12 +37,4 @@ public class ProductController {
         return product;
     }
 
-    //    localhost:8080/products?price=200のGETリクエストを行い、価格が200で登録されている情報を取得する
-    @GetMapping("/price-list")
-    public List<ProductResponse> getProductInfo(
-            @RequestParam(value = "price", defaultValue = "") int price
-    ) {
-
-        return productService.findByPrice(price);
-    }
 }
