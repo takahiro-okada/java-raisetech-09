@@ -1,13 +1,14 @@
 package com.raisetech09.oka.service;
 
 import com.raisetech09.oka.controller.ProductResponse;
+import com.raisetech09.oka.entity.Product;
 
 import java.util.List;
 
 public interface ProductService {
-    List<ProductResponse> findAll();
+    List<Product> findAll();
 
-    List<ProductResponse> findById(int id);
+    List<Product> findById(int id);
 
-    List<ProductResponse> findByPrice(int price);
+    List<Product> findByPrice(int price);
 }

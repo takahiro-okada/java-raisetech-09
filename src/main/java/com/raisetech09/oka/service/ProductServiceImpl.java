@@ -1,6 +1,6 @@
 package com.raisetech09.oka.service;
 
-import com.raisetech09.oka.controller.ProductResponse;
+import com.raisetech09.oka.entity.Product;
 import com.raisetech09.oka.repository.ProductMapper;
 import org.springframework.stereotype.Service;
 
@@ -16,17 +16,17 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public List<ProductResponse> findAll() {
+    public List<Product> findAll() {
         return productMapper.findAll();
     }
 
     @Override
-    public List<ProductResponse> findById(int id) {
+    public List<Product> findById(int id) {
         return productMapper.findById(id);
     }
 
     @Override
-    public List<ProductResponse> findByPrice(int price) {
+    public List<Product> findByPrice(int price) {
         return productMapper.findByPrice(price);
     }
 }
