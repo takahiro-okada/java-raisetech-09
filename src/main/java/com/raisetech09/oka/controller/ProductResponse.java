@@ -1,5 +1,9 @@
 package com.raisetech09.oka.controller;
 
+import com.raisetech09.oka.entity.Product;
+
+import java.util.List;
+
 public class ProductResponse {
 
     private int id;
@@ -10,6 +14,12 @@ public class ProductResponse {
         this.id = id;
         this.name = name;
         this.price = price;
+    }
+
+    public ProductResponse(Product product){
+        this.id = product.getId();
+        this.name = product.getName();
+        this.price = product.getPrice();
     }
 
     public int getId() {

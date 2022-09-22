@@ -21,10 +21,12 @@ public class ProductController {
     public List<ProductResponse> get(
             @RequestParam(value = "price", defaultValue = "-1") int price
     ) {
-        if (price == -1) {
-            return productService.findAll();
+        if(price == -1){
+            List<Product> products = productService.findAll();
+            return products.stream().map(ProductResponse::new).toList();
         } else {
-            return productService.findByPrice(price);
+            List<Product> products = productService.findByPrice(price);
+            return products.stream().map(ProductResponse::new).toList();
         }
     }
 
@@ -34,8 +36,8 @@ public class ProductController {
     public List<ProductResponse> getProductById(
             @PathVariable int id
     ) {
-        List<ProductResponse> product = productService.findById(id);
-        return product;
+        List<Product> products = productService.findById(id);
+        return products.stream().map(ProductResponse::new).toList();
     }
 
 }
