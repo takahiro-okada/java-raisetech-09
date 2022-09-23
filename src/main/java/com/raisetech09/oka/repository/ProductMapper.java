@@ -12,7 +12,7 @@ public interface ProductMapper {
     List<Product> findAll();
 
     @Select("SELECT * FROM product WHERE id = #{id}")
-    List<Product> findById(int id);
+    Product findById(int id);
 
     @Select("SELECT * FROM product WHERE price = #{price}")
     List<Product> findByPrice(int price);

@@ -11,7 +11,7 @@ public class ProductServiceImpl implements ProductService {
 
     private ProductMapper productMapper;
 
-    public ProductServiceImpl(ProductMapper productMapper){
+    public ProductServiceImpl(ProductMapper productMapper) {
         this.productMapper = productMapper;
     }
 
@@ -21,7 +21,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public List<Product> findById(int id) {
+    public Product findById(int id) {
         return productMapper.findById(id);
     }
 
