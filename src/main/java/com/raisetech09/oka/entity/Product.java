@@ -1,4 +1,4 @@
-package com.raisetech09.oka.service;
+package com.raisetech09.oka.entity;
 
 public class Product {
     private int id;
