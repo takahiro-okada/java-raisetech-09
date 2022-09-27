@@ -28,5 +28,4 @@ public class CreateProduct {
     public void setPrice(int price) {
         this.price = price;
     }
-
 }

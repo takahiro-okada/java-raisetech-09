@@ -13,5 +13,4 @@ public interface ProductService {
     List<Product> findByPrice(int price);
 
     void create(CreateProduct createProduct);
-
 }
