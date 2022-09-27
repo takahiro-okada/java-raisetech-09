@@ -1,5 +1,6 @@
 package com.raisetech09.oka.service;
 
+import com.raisetech09.oka.entity.CreateProduct;
 import com.raisetech09.oka.entity.Product;
 import com.raisetech09.oka.repository.ProductMapper;
 import org.springframework.stereotype.Service;
@@ -28,5 +29,11 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public List<Product> findByPrice(int price) {
         return productMapper.findByPrice(price);
+    }
+
+
+    @Override
+    public void create(CreateProduct createProduct) {
+        productMapper.createProduct(createProduct);
     }
 }
