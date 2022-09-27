@@ -1,5 +1,6 @@
 package com.raisetech09.oka.controller;
 
+import com.raisetech09.oka.entity.CreateProduct;
 import com.raisetech09.oka.entity.Product;
 import com.raisetech09.oka.service.ProductService;
 import org.springframework.web.bind.annotation.*;
@@ -36,6 +37,11 @@ public class ProductController {
     ) {
         Product product = productService.findById(id);
         return new ProductResponse(product);
+    }
+
+    @PostMapping("/products")
+    public void create(@RequestBody CreateProduct createProduct) {
+        productService.create(createProduct);
     }
 
 }
